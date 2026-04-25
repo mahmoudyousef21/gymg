@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LiftTier | Social Motivation Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#0e0e0e",
+                    "error-dim": "#d7383b",
+                    "inverse-surface": "#fcf8f8",
+                    "on-primary-fixed": "#003840",
+                    "tertiary-fixed": "#b8a3ff",
+                    "on-tertiary": "#25006b",
+                    "on-primary-container": "#004d57",
+                    "secondary": "#ff734a",
+                    "tertiary-container": "#7c4dff",
+                    "secondary-dim": "#ff734a",
+                    "outline": "#777575",
+                    "on-secondary-fixed": "#661700",
+                    "on-background": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "on-error": "#490006",
+                    "primary": "#81ecff",
+                    "secondary-container": "#b02f00",
+                    "on-primary-fixed-variant": "#005762",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "primary-fixed-dim": "#00d4ec",
+                    "on-primary": "#005762",
+                    "background": "#0e0e0e",
+                    "surface-container-high": "#201f1f",
+                    "on-tertiary-container": "#ffffff",
+                    "secondary-fixed": "#ffc4b4",
+                    "surface-variant": "#262626",
+                    "primary-dim": "#00d4ec",
+                    "surface-bright": "#2c2c2c",
+                    "on-tertiary-fixed": "#1c0055",
+                    "outline-variant": "#494847",
+                    "surface-container-lowest": "#000000",
+                    "inverse-on-surface": "#565554",
+                    "primary-container": "#00e3fd",
+                    "on-secondary": "#430c00",
+                    "surface-tint": "#81ecff",
+                    "error": "#ff716c",
+                    "primary-fixed": "#00e3fd",
+                    "surface-container-low": "#131313",
+                    "inverse-primary": "#006976",
+                    "on-secondary-fixed-variant": "#982700",
+                    "error-container": "#9f0519",
+                    "tertiary": "#a68cff",
+                    "on-secondary-container": "#fff6f4",
+                    "surface-container-highest": "#262626",
+                    "surface": "#0e0e0e",
+                    "secondary-fixed-dim": "#ffb19b",
+                    "tertiary-dim": "#7e51ff",
+                    "on-surface": "#ffffff",
+                    "on-surface-variant": "#adaaaa",
+                    "surface-container": "#1a1919",
+                    "on-error-container": "#ffa8a3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.3);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 15px 2px rgba(255, 115, 74, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-shadow-glow {
+            text-shadow: 0 0 10px rgba(129, 236, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<div class="flex min-h-screen">
+<!-- SideNavBar - Web Anchor -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-neutral-900 sticky top-0 border-r border-neutral-800 py-8 px-4 font-inter text-sm font-medium">
+<div class="mb-10 px-2">
+<span class="text-xl font-black text-cyan-400">LiftTier</span>
+</div>
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="relative">
+<img alt="User profile picture" class="w-10 h-10 rounded-full object-cover border border-cyan-400/30" data-alt="Intense close-up of a weightlifter's face with dramatic lighting, grit, and determination in a dark gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXBkvwUIzH2ylr4RckfycSs1GIz718bqc5buJOZzCZxN_FjRDAOt0g50YDFUgBH-VvbMlLrRdJswkzPOmFvqDF-xPPHPO4Gmc474jVia_7SVqqejE26siOAoGM7STh0hhsxIAqALWWZvCkKKowV5lZaiWfMFZHC0PuTA2FAd-p86axIJWyEEUko2vcITuHLStqchOS0pzdDewzJdgvZ2bMUziupml83WCP9UqNEgdKUhJoV0EBOUQGrzLObPHuzUiWoPZEUDco_-g"/>
+<div class="absolute -top-1 -right-1 bg-secondary w-3 h-3 rounded-full border-2 border-neutral-900"></div>
+</div>
+<div>
+<p class="text-on-surface font-bold">Neon Athlete</p>
+<p class="text-xs text-on-surface-variant">Elite Tier • 1,240kg Total</p>
+</div>
+</div>
+<nav class="space-y-2 flex-1">
+<a class="flex items-center gap-3 p-3 rounded-xl transition-all text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl transition-all text-cyan-400 bg-cyan-400/10 border-r-2 border-cyan-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Social Feed</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl transition-all text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboards</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl transition-all text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800" href="#">
+<span class="material-symbols-outlined">rebase_edit</span>
+<span>AI Rehab</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 pt-4 border-t border-neutral-800/50">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-xl mb-4 active:opacity-80 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+<span>Start New Session</span>
+</button>
+<a class="flex items-center gap-3 p-3 rounded-xl text-neutral-500 hover:text-neutral-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl text-neutral-500 hover:text-neutral-200" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 flex flex-col min-w-0 bg-background relative">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-neutral-950/60 backdrop-blur-xl">
+<div class="flex items-center gap-4">
+<span class="md:hidden text-2xl font-bold italic text-cyan-400 tracking-tighter font-headline">LiftTier</span>
+<h1 class="hidden md:block font-headline tracking-tight text-xl font-bold text-on-surface">Community Motivation</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-neutral-400 hover:text-cyan-300 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-neutral-400 hover:text-cyan-300 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-cyan-400/50">
+<img alt="User avatar with current tier badge overlay" class="w-full h-full object-cover" data-alt="Close-up of athletic man in dark lighting with blue rim light reflecting on his face, gym background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuZkTNAw_e9WGvcb4Hn3MRYGf36UkgON05g7zhCheqml1oA8bsyU0XCRq29qs0yl6XViDS7KkK0GWqkafo-3Qan-s1Dbud9E8ng8Qopk3bYI5HEg-w0TNpEL0a2-32GY2BxiZIgcrn4i_eErebOCjEZOUiqQKq99zMUJxS5kA1fN8A7K5Py6ycbOwgVgMYrFHWnn8RESAnjtWDoJneeDjeNbmTYlFGjCL_i64lxv-_mg4sA8sJb2SaDUOwsQc6HGOrRfgKkJkEOlA"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 max-w-4xl mx-auto w-full px-4 md:px-8 py-8 space-y-12">
+<!-- Weekly Challenge Section (Asymmetric Hero) -->
+<section class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-secondary to-primary-container rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-surface-container-low rounded-2xl overflow-hidden flex flex-col md:flex-row items-center border border-outline-variant/10">
+<div class="md:w-1/2 p-8 space-y-4">
+<div class="inline-block px-3 py-1 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-[10px] font-black tracking-widest uppercase mb-2">Active Challenge</div>
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-on-surface leading-tight">Most total volume squatted this week</h2>
+<p class="text-on-surface-variant font-body">Current Leader: <span class="text-primary font-bold">@HeavyDuty</span> with <span class="text-secondary font-black">42,500 kg</span></p>
+<div class="flex items-center gap-4 pt-4">
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold rounded-lg neon-glow-primary transition-all active:scale-95">Join Challenge</button>
+<span class="text-label-md text-on-surface-variant">2d 14h left</span>
+</div>
+</div>
+<div class="md:w-1/2 h-64 md:h-full w-full relative">
+<img alt="Squat rack in a high-tech gym" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700" data-alt="Modern gym with neon blue lights highlighting a professional squat rack, focused atmosphere, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZf-o1M3SzgigH80amv2P1FEVgM-dteoOcDtVFGkr1Wj0fLvEFgELJ2FmYGDGfgT9hk4KQkW28vexhUuFd7doExFwTRSi4rZKdKXdvwwrYGUSQwI8zb475yFpqhVCsHrBhcF3TYaNy_fphTnvAjIluOGYiEyJjhixT0VbFsFvezKoKDsd1VwhhBZQhpJY5VL-2LYNpc8vRHTnTRJJ8kOq3LX38Jphy0fo9CdKif11xVPsj6RLr3Pbk0i5VQuhMLXG02DUfy4JbtE"/>
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-low via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Motivation Feed -->
+<div class="space-y-10">
+<!-- Post 1: Video PR -->
+<article class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/5 shadow-2xl">
+<div class="p-5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary p-0.5">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="Fitness athlete female with sweat and intensity, studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWX7QCNRJRqDC6pR1l4jHH3n-bThIGQs2JRkbdijBxZi8iPDop95NZ6C39ay-TVbknmzA7FA764f38fi3-EkOI7oSMu7blQ5TiGyVpDWKK3sS9ycYTwCBHJatmXPikwPqZBWMRu4yUu_SSwdBD-f4NjngVYOgXkeuUxiHJZYjGB1BHE_V75mtRNp0svU6FxPAy5HcDC9Stg36mfNfKE-H-eX4U6cF1xOYaKcPQFpfCb50SBZvhgUQ0nyNtgqLwVAgxorOUJ0KmgYk"/>
+</div>
+<div>
+<h3 class="font-bold text-on-surface flex items-center gap-2">
+                                        Sarah Iron <span class="text-[10px] bg-secondary px-2 py-0.5 rounded text-on-secondary font-black">ELITE</span>
+</h3>
+<p class="text-xs text-on-surface-variant font-medium">Squat Day • 2 hours ago</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="relative aspect-video group cursor-pointer overflow-hidden">
+<img alt="Workout video thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Muscular woman performing heavy barbell back squats in a warehouse gym, dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJakeZapfCKRrrLYpjmsyidLm68ZDwqXQLaMvcE4sfD8Osp2bWr9kUnyVr9wTwkm4KfbGV0fe7op1c4tZ9K-ZvNp-6I3A42DYe2796O-q_hcSPPHgTlRAfM7jYn-0mAzlbzCVF5TTzMcttMGhXcjFRmquLYP1m9D4WSIMYTfNS8YDK854jk7neRzykBhxPCtOxtWfnsPBrHr8MnieXFGCKWOfjcwY1l0R6UFXquiu1lioKcGKdfg9f_5cb4OukVm3u91XjT8SqjM"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/0 transition-all">
+<div class="w-16 h-16 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center text-on-primary-fixed shadow-2xl">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- PR Overlay -->
+<div class="absolute top-4 right-4 bg-secondary/90 text-on-secondary px-4 py-2 rounded-lg font-headline font-black italic tracking-tighter text-xl skew-x-[-12deg] shadow-lg">
+                                NEW PR: 180KG
+                            </div>
+</div>
+<div class="p-6">
+<p class="text-on-surface mb-6 text-lg leading-relaxed">Finally broke through the 175kg plateau. Form felt solid, depth was there. Kinetic mode: ENGAGED. 🦾</p>
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-bold text-sm">Hype</span>
+<span class="text-xs text-on-surface-variant">2.4k</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform">texture</span>
+<span class="font-bold text-sm">Chalk</span>
+<span class="text-xs text-on-surface-variant">842</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-bold text-sm">Fire</span>
+<span class="text-xs text-on-surface-variant">1.1k</span>
+</button>
+<div class="ml-auto flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img alt="Avatar" data-alt="Portrait of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbYwjLPRPkD8aAMMHzViCiImWz1UfT664f2MEpK26aimxPb4iJef5Qc_WMhATv-G6qtp0qyRy7LSZ41zCbx8hGXdrmyBQsZMHPn8ZCfxdFyfi8xnSlcZUpNX_1AIcDYbPHTZC1vCQQBKiJi9TMme_obNkuqlGl9qQEYNBGcD1Su24Qa9HMdeNLCSXYyVJMhCIsFFq-Xh-H_b5cNM-FTrKwQqTD8pVOe6H5_IOSvyC0tPU9pLqE8L73jyFgXIPFgyAbkdJOtP3ePd0"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img alt="Avatar" data-alt="Portrait of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbzGZ1K49Drue4-z1p3xgswwM5pmKVlLOSTU3HRdzxrj-I4LMv9yuRMUqpXJmFV8lF3NNRbyisJDxRiW_4KfO-AeL8EhiHsyuDzFo9ozUAsyKO4Jx7QTZIdrAHOsb0YGqcIJrBxjMgcyJcT6CMeumpXxEb6eu9JEZBWQgiYQncl7ZLKgoz30ajOXlx3wKzwr1LoiwrxfO5j5Dw_c0MYmklNfjhtxCY3UNISOvWSwqJAlkKAOTf7BU6d6RiAUIDE5sS9_T0IaQfBEA"/>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center text-[10px] text-on-surface-variant">+12</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Post 2: Workout Log Grid -->
+<article class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/5 shadow-2xl">
+<div class="p-5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-container p-0.5">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="Athletic man with a short beard in a minimalist dark environment, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEScuRWB9VeQsOQRHlBUXF-MKqkbUkjxy9WIufvkmlIPrNxalk62TXHj0n6S8rNi9BRjp8VQsD9j5zBfmeNbG4_UCPe1TyrtUCrHNDzJwCb9Qx9AAzd8kmwHdXUN3_lKzhRdJ6lJme3YFT5gcoBLWaFXx5NEzv6EZHyniA8rYGeiRA59xfiM0QiIqzHkxbF-PZBOjfk_-i7JXELPr53vQ6iYST6riwp7yXYk_iKyTFtvf0KYrklHSRRJnD7YYufqk5hx8Ny7Qc18U"/>
+</div>
+<div>
+<h3 class="font-bold text-on-surface flex items-center gap-2">
+                                        Marcus Vault <span class="text-[10px] border border-primary text-primary px-2 py-0.5 rounded font-black">IRON</span>
+</h3>
+<p class="text-xs text-on-surface-variant font-medium">Upper Body Hypertrophy • 4 hours ago</p>
+</div>
+</div>
+</div>
+<!-- Data Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant/10 border-y border-outline-variant/10">
+<div class="p-6 bg-surface-container-low">
+<span class="text-[10px] text-on-surface-variant font-black uppercase tracking-tighter">Volume</span>
+<div class="text-2xl font-headline font-bold text-on-surface">12,450<span class="text-xs text-primary ml-1 uppercase">kg</span></div>
+</div>
+<div class="p-6 bg-surface-container-low">
+<span class="text-[10px] text-on-surface-variant font-black uppercase tracking-tighter">Duration</span>
+<div class="text-2xl font-headline font-bold text-on-surface">1h 14<span class="text-xs text-primary ml-1 uppercase">m</span></div>
+</div>
+<div class="p-6 bg-surface-container-low">
+<span class="text-[10px] text-on-surface-variant font-black uppercase tracking-tighter">Sets</span>
+<div class="text-2xl font-headline font-bold text-on-surface">24</div>
+</div>
+<div class="p-6 bg-surface-container-low">
+<span class="text-[10px] text-on-surface-variant font-black uppercase tracking-tighter">Intensity</span>
+<div class="text-2xl font-headline font-bold text-secondary">8.5<span class="text-xs ml-1 uppercase">RPE</span></div>
+</div>
+</div>
+<div class="p-6">
+<div class="space-y-4 mb-8">
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest border-l-4 border-primary">
+<div>
+<h4 class="font-bold text-on-surface">Flat Bench Press (Barbell)</h4>
+<p class="text-xs text-on-surface-variant">3 sets • 8 reps • 100kg</p>
+</div>
+<span class="text-primary font-black">STABLE</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest border-l-4 border-secondary">
+<div>
+<h4 class="font-bold text-on-surface">Weighted Pull Ups</h4>
+<p class="text-xs text-on-surface-variant">4 sets • 6 reps • +20kg</p>
+</div>
+<span class="text-secondary font-black">+5KG UP</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-bold text-sm">Hype</span>
+<span class="text-xs text-on-surface-variant">156</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform">texture</span>
+<span class="font-bold text-sm">Chalk</span>
+<span class="text-xs text-on-surface-variant">12</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-highest border border-outline-variant/20 hover:border-secondary transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-bold text-sm">Fire</span>
+<span class="text-xs text-on-surface-variant">89</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- BottomNavBar - Mobile Anchor -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 px-6 py-4">
+<div class="glass-panel rounded-full flex justify-between items-center px-8 py-3 border border-white/5 shadow-2xl">
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined">dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-cyan-400 font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</button>
+<button class="flex flex-col items-center gap-1 -mt-10">
+<div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary-fixed shadow-lg neon-glow-primary">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined">leaderboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-400">
+<div class="w-6 h-6 rounded-full overflow-hidden border border-neutral-400">
+<img alt="Profile" data-alt="Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAbPCa9CdGOZxQHtZ67CTLO_aPD-k_kP83zuTAZXkzNbQzGdG_SHILrm-WG_Y3yZUyFAx70DWNb0UpABkkYU5tY0M-1X-vY31TBPPMO_wOCvE0LBg7vLV4vv8ziXlUpjfYOcGg8xJAMjDbAXAbN_sfjiQyaXgbJS_PmRqxO9XQv7nehS4YUSre2biUZvwtojtWGg_4d81J-a3XnQ6dH9Wc5aUpIz7TGw9z6Ahfg6RAubGDLT6_cdCAOP8r-1EX_lmAcUBZTXK-KyI"/>
+</div>
+</button>
+</div>
+</nav>
+</main>
+</div>
+</body></html>

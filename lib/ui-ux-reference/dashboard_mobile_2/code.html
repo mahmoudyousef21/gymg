@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LiftTier | Kinetic Cybernetics Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-dim": "#d7383b",
+                      "outline-variant": "#494847",
+                      "primary-fixed": "#00e3fd",
+                      "primary": "#81ecff",
+                      "tertiary-dim": "#7e51ff",
+                      "primary-dim": "#00d4ec",
+                      "error-container": "#9f0519",
+                      "on-tertiary": "#25006b",
+                      "surface-container-high": "#201f1f",
+                      "on-secondary-fixed-variant": "#982700",
+                      "on-primary": "#005762",
+                      "on-secondary-fixed": "#661700",
+                      "inverse-primary": "#006976",
+                      "tertiary": "#a68cff",
+                      "on-tertiary-container": "#ffffff",
+                      "primary-fixed-dim": "#00d4ec",
+                      "on-primary-fixed-variant": "#005762",
+                      "on-secondary-container": "#fff6f4",
+                      "secondary-container": "#b02f00",
+                      "on-error-container": "#ffa8a3",
+                      "primary-container": "#00e3fd",
+                      "secondary-dim": "#ff734a",
+                      "secondary": "#ff734a",
+                      "secondary-fixed-dim": "#ffb19b",
+                      "inverse-on-surface": "#565554",
+                      "tertiary-container": "#7c4dff",
+                      "on-secondary": "#430c00",
+                      "on-primary-fixed": "#003840",
+                      "secondary-fixed": "#ffc4b4",
+                      "background": "#0e0e0e",
+                      "surface": "#0e0e0e",
+                      "tertiary-fixed": "#b8a3ff",
+                      "inverse-surface": "#fcf8f8",
+                      "on-error": "#490006",
+                      "surface-container": "#1a1919",
+                      "surface-bright": "#2c2c2c",
+                      "surface-variant": "#262626",
+                      "surface-dim": "#0e0e0e",
+                      "on-background": "#ffffff",
+                      "surface-tint": "#81ecff",
+                      "tertiary-fixed-dim": "#ab93ff",
+                      "outline": "#777575",
+                      "surface-container-lowest": "#000000",
+                      "on-surface-variant": "#adaaaa",
+                      "error": "#ff716c",
+                      "surface-container-highest": "#262626",
+                      "on-tertiary-fixed-variant": "#4000ad",
+                      "on-tertiary-fixed": "#1c0055",
+                      "surface-container-low": "#131313",
+                      "on-surface": "#ffffff",
+                      "on-primary-container": "#004d57"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.3);
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body select-none">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e] bg-gradient-to-b from-[#131313] to-transparent flex justify-between items-center px-6 h-20 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a determined athlete in a dark gym environment with sharp blue neon rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzpkysDMR8zjNjo8oxJ0KSloL7YgJjXmhQFNXRYVNo0us7-lRcnzSiyK-EX8qyaI2wYCuwmGddBNiAoa5VR_mfc8OYjGt5nd5tuTGdB0UTIKBe441iR0QLwSShigIXvmOE4GTJburz4JoSZFa-rpKQOBthd9TvDKWWmP9B7HRrqcJos1vC5TA82MIAZcEAwzb8Hmex9GB4Jjb62vMp6Wym4ytehACVPTsu0vcNb6Wi5uTMHt7e0VsBRX88iZ2LTSQZZ2XK8vlR_e0"/>
+</div>
+<span class="font-headline font-bold tracking-tight text-2xl italic text-[#00E5FF] tracking-tighter">LIFTTIER</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[#00E5FF]">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 space-y-6">
+<!-- Tier Badge Section -->
+<section class="relative overflow-hidden p-6 rounded-xl surface-container-low border border-outline-variant/15">
+<div class="absolute -top-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-9xl text-secondary">workspace_premium</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Current Status</span>
+<h2 class="font-headline text-3xl font-bold italic tracking-tighter text-secondary">GOLD TIER</h2>
+</div>
+<div class="glass-panel p-3 rounded-xl border-t border-on-surface/30 neon-glow">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-4">
+<div class="bg-secondary h-full w-4/5 shadow-[0_0_8px_#ff734a]"></div>
+</div>
+<p class="mt-2 font-label text-[10px] text-on-surface-variant text-right tracking-wide">240 XP TO ELITE</p>
+</section>
+<!-- Quick Stats Grid (The Big Three) -->
+<section class="grid grid-cols-1 gap-4">
+<h3 class="font-headline text-lg font-medium text-on-surface-variant px-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">analytics</span>
+                ESTIMATED 1RM
+            </h3>
+<div class="grid grid-cols-3 gap-3">
+<!-- Squat -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center space-y-2 border border-outline-variant/15">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Squat</span>
+<div class="font-headline text-3xl font-bold text-on-surface tracking-tighter">145<span class="text-xs font-normal text-on-surface-variant ml-0.5">kg</span></div>
+<span class="text-[9px] text-primary flex items-center font-bold">+2.5%</span>
+</div>
+<!-- Bench -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center space-y-2 border border-outline-variant/15">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Bench</span>
+<div class="font-headline text-3xl font-bold text-on-surface tracking-tighter">105<span class="text-xs font-normal text-on-surface-variant ml-0.5">kg</span></div>
+<span class="text-[9px] text-secondary flex items-center font-bold">STABLE</span>
+</div>
+<!-- Deadlift -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center space-y-2 border border-outline-variant/15">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Deadlift</span>
+<div class="font-headline text-3xl font-bold text-on-surface tracking-tighter">190<span class="text-xs font-normal text-on-surface-variant ml-0.5">kg</span></div>
+<span class="text-[9px] text-primary flex items-center font-bold">+5.0%</span>
+</div>
+</div>
+</section>
+<!-- Muscle Imbalance Alert Widget -->
+<section class="bg-surface-container-high/50 backdrop-blur-sm rounded-xl p-5 border border-error-container/20">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-error-container/20 rounded-lg">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<h4 class="font-headline text-sm font-bold text-on-surface">MUSCLE IMBALANCE</h4>
+<p class="text-[11px] text-on-surface-variant leading-tight mt-0.5">Left/Right Quad recruitment deviation detected: <span class="text-error font-bold">14%</span></p>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 bg-surface-container-highest py-2 rounded-lg text-[11px] font-bold tracking-wider text-primary border border-primary/20 uppercase transition-all active:scale-95">View Analysis</button>
+<button class="flex-1 bg-primary text-on-primary py-2 rounded-lg text-[11px] font-bold tracking-wider uppercase transition-all active:scale-95">Rehab Plan</button>
+</div>
+</section>
+<!-- Activity Bento Grid Section -->
+<section class="grid gap-4 grid-cols-1">
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/15 flex flex-col justify-between h-40 relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" data-alt="Close-up of industrial heavy dumbbells on a rack in a moody atmospheric gym with cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc8rOPNGE-OInn_guxxL0wURjeIliwVe3KM8aGQQSM3kDJz0lqTsHD4hyYR1v8aC2rqpOVW_U96cg63yT7wQXK92U1W3FbtSEgC4ARVsDQHWny7b7NP6ye5CFZNd9FBNSmLqgz52wJ8kAoVlRe9HMKgNCeMY2dNPBJMAQMMD4O8rcoE3I-l6ZnyFSFPqqHMx-1vTK1tY93qF5ap2tbo9HMhuAvUIgbclhqZHoSo7r1IWe_T1So-BnTHRdPI-uPaeGBLYFwxP92yHg"/>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Next Session</span>
+<div>
+<h5 class="font-headline text-lg font-bold">Push A</h5>
+<p class="text-[10px] text-primary font-bold">SCHEDULED: 18:30</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recovery Widget -->
+<section class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/15 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle cx="24" cy="24" fill="transparent" r="20" stroke="#262626" stroke-width="4"></circle>
+<circle cx="24" cy="24" fill="transparent" r="20" stroke="#81ecff" stroke-dasharray="125.6" stroke-dashoffset="31.4" stroke-width="4"></circle>
+</svg>
+<span class="text-xs font-bold font-headline">75%</span>
+</div>
+<div>
+<h5 class="font-headline text-sm font-bold">RECOVERY SCORE</h5>
+<p class="text-[10px] text-on-surface-variant">Optimal state for heavy CNS load.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">bolt</span>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[32px] bg-[#131313]/60 backdrop-blur-xl border-t border-[#494847]/15 shadow-[0_-8px_30px_rgb(0,0,0,0.5)] flex justify-around items-center h-24 pb-6 px-4 w-full">
+<a class="flex flex-col items-center justify-center text-[#00E5FF] drop-shadow-[0_0_10px_rgba(0,229,255,0.5)] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Social</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Coaches</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">AI Rehab</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) -->
+<button class="fixed right-6 bottom-28 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-[0_0_20px_rgba(129,236,255,0.4)] active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-on-primary text-3xl font-bold">add</span>
+</button>
+</body></html>

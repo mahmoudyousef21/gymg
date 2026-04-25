@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Split Review - Kinetic Cybernetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#7c4dff",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "secondary-dim": "#ff734a",
+                    "on-primary": "#005762",
+                    "primary-fixed-dim": "#00d4ec",
+                    "inverse-surface": "#fcf8f8",
+                    "secondary-fixed-dim": "#ffb19b",
+                    "surface-variant": "#262626",
+                    "surface-container-low": "#131313",
+                    "on-tertiary-container": "#ffffff",
+                    "on-secondary-fixed-variant": "#982700",
+                    "surface": "#0e0e0e",
+                    "on-secondary": "#430c00",
+                    "surface-container-highest": "#262626",
+                    "on-surface": "#ffffff",
+                    "secondary": "#ff734a",
+                    "primary-dim": "#00d4ec",
+                    "surface-container": "#1a1919",
+                    "outline": "#777575",
+                    "on-primary-container": "#004d57",
+                    "error": "#ff716c",
+                    "surface-bright": "#2c2c2c",
+                    "error-dim": "#d7383b",
+                    "background": "#0e0e0e",
+                    "on-error-container": "#ffa8a3",
+                    "tertiary-dim": "#7e51ff",
+                    "primary-fixed": "#00e3fd",
+                    "error-container": "#9f0519",
+                    "surface-container-high": "#201f1f",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "surface-dim": "#0e0e0e",
+                    "on-primary-fixed-variant": "#005762",
+                    "primary-container": "#00e3fd",
+                    "secondary-container": "#b02f00",
+                    "on-background": "#ffffff",
+                    "inverse-primary": "#006976",
+                    "on-secondary-fixed": "#661700",
+                    "on-surface-variant": "#adaaaa",
+                    "primary": "#81ecff",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary": "#25006b",
+                    "tertiary-fixed": "#b8a3ff",
+                    "secondary-fixed": "#ffc4b4",
+                    "inverse-on-surface": "#565554",
+                    "on-tertiary-fixed": "#1c0055",
+                    "on-primary-fixed": "#003840",
+                    "on-error": "#490006",
+                    "tertiary": "#a68cff",
+                    "surface-tint": "#81ecff",
+                    "outline-variant": "#494847",
+                    "on-secondary-container": "#fff6f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .tonal-transition {
+            background: linear-gradient(to bottom, #131313, transparent);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.2);
+        }
+        .neon-glow-active {
+            box-shadow: 0 0 20px 4px rgba(0, 229, 255, 0.4);
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full bg-[#0e0e0e] tonal-transition">
+<div class="flex items-center gap-4">
+<button class="text-[#00E5FF] hover:opacity-80 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Space_Grotesk'] tracking-wider uppercase font-bold text-lg text-[#00E5FF] drop-shadow-[0_0_8px_rgba(0,229,255,0.4)]">
+                PUSH A REVIEW
+            </h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#adaaaa]" data-icon="info">info</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a fit person in a dark gym environment with dramatic cyan rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqGu2M1cVDHp_UB6iVTrQ_lXP3VX26DvRJxc_jXz53AmJrkMYHg5gVAVfYysm5ulKP82vy47pvCz3Lj5wj5t0vmgWP-jKmkLPBe3IKcw8RFHqqrrwzzmK5kOQnmsV8E-RmgZL5UtJXhpkiiC5zzHsYc3_SG_5Mdnq5CUDzJuMUANfGcHNxBrVRXyy5vxwKaOxyS627231Snz1WarnTfb_-O11pS5JlPL8ZfLjdGymvNrFNRt0_HnMj8wFnWqISYuxBb9q5bMymtt4"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto min-h-screen">
+<!-- Header Section with Kinetic Asymmetry -->
+<div class="relative mb-10 pl-4 border-l-2 border-primary">
+<p class="font-label text-[10px] tracking-[0.2em] text-primary uppercase font-bold mb-1">Current Focus</p>
+<h2 class="font-headline text-4xl font-black uppercase tracking-tight italic">
+                Chest, Shoulders &amp; Triceps
+            </h2>
+<div class="flex gap-4 mt-4">
+<div class="bg-surface-container-low px-3 py-1 rounded-lg border border-outline-variant/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="timer">timer</span>
+<span class="text-xs font-bold font-headline tracking-widest text-on-surface-variant uppercase">75 MIN</span>
+</div>
+<div class="bg-surface-container-low px-3 py-1 rounded-lg border border-outline-variant/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="bolt">bolt</span>
+<span class="text-xs font-bold font-headline tracking-widest text-on-surface-variant uppercase">HIGH INTENSITY</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Exercises List -->
+<div class="space-y-6">
+<!-- Exercise Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container">
+<div class="flex flex-col md:flex-row h-full">
+<!-- Video Thumbnail Placeholder -->
+<div class="relative w-full md:w-48 h-48 md:h-auto bg-surface-container-highest overflow-hidden">
+<img alt="Form Preview" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Professional fitness trainer performing a barbell bench press in a high-tech gym with neon accents and cinematic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6LBMpmg76UAyDWjcRg_lapzRULeHfpyd4znULJZghZsSP4U2_dKXRoOl9nM0nz97-jaQUIJ9XUe1ixmoSlNaEi9HZr67VOQ_a7JR800uiuTFzRTnVE7p0yN5KvjMzAt4k-WzIPInYY6ykntFqUmm6TFTvzJVqTHkNl1a_7znNweK1nTy5SdXJ2dV7hRH2V3WHPKix6oekv_vQq2x2GpT5V0Eenj3-GKrAnIekX9PnaEj9wfn9KtSMCFgn096E6r_VWy77zOBMaNk"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary neon-glow">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-widest">
+                            FORM PREVIEW
+                        </div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight text-white leading-none">
+                                    Flat Barbell Bench Press
+                                </h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline text-2xl font-black text-primary">3</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Sets of</span>
+<span class="font-headline text-2xl font-black text-primary">8-12</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Reps</span>
+</div>
+<div class="bg-surface-container-highest/40 rounded-lg p-3 border-l-2 border-secondary/50 mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="lightbulb">lightbulb</span>
+<span class="text-[10px] font-black text-secondary uppercase tracking-[0.1em]">Coach's Tip</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                    Drive your heels into the floor and maintain a slight arch in your lower back. Control the eccentric for 3 seconds.
+                                </p>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-2 bg-surface-container-highest rounded border border-outline-variant/20 hover:border-primary/40 transition-all group/btn">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover/btn:text-primary transition-colors">Swap Variation</span>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold text-white">Dumbbell Bench Press</span>
+<span class="material-symbols-outlined text-sm text-primary" data-icon="swap_horiz">swap_horiz</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Exercise Card 2 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative w-full md:w-48 h-48 md:h-auto bg-surface-container-highest overflow-hidden">
+<img alt="Form Preview" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Cinematic shot of a person doing seated overhead dumbbell press, focusing on the shoulder muscles, sharp lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJMSOmtFMn564Un7LfRYEOqAwsdEJduESTBwaQi_EFGVDTKiRa2RsY3P19zrVJ1-eghNmsEzVei0vIW--UG1pVL9PQCgWiwunm1hT58zlOkcR-4PwlNk0UnebJwiNqrXpdQ-gF-C5vXXF1V6zWp6sTdkH8xCbYrz202jR-AmlgThom6zb8mLlXLUTADe76BP-K5_SfUYvb_0AikqF7Qh9A9PrdaUoVTfi4r5e_QJTItc_oPv2uKLyGa-OA-r3Ow6KqaL_I-JRknkM"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-widest">
+                            FORM PREVIEW
+                        </div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight text-white leading-none">
+                                    Seated Dumbbell Press
+                                </h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline text-2xl font-black text-primary">4</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Sets of</span>
+<span class="font-headline text-2xl font-black text-primary">10-12</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Reps</span>
+</div>
+<div class="bg-surface-container-highest/40 rounded-lg p-3 border-l-2 border-secondary/50 mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="lightbulb">lightbulb</span>
+<span class="text-[10px] font-black text-secondary uppercase tracking-[0.1em]">Coach's Tip</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                    Stop the dumbbells just above shoulder height to keep tension on the delts. Don't lock out elbows at the top.
+                                </p>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-2 bg-surface-container-highest rounded border border-outline-variant/20 hover:border-primary/40 transition-all group/btn">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover/btn:text-primary transition-colors">Swap Variation</span>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold text-white">Barbell Military Press</span>
+<span class="material-symbols-outlined text-sm text-primary" data-icon="swap_horiz">swap_horiz</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Exercise Card 3 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative w-full md:w-48 h-48 md:h-auto bg-surface-container-highest overflow-hidden">
+<img alt="Form Preview" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Action shot of tricep pushdowns on a cable machine, highlighting the muscle definition and sleek metal equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJCOYnbsD3V69OUylsSIy4ZFkGfk0aZXpZ4-fFgJmeWmPNQYqG9KBQKu1DNrM4sQ58m-y3oWRioof_7Lrc2fvlfu6ZhPN2Y47KlxIfkCvDvXamfD5MXZLyE7wqOPeb2FvsUknmloWJI1njOCA7FFM8hH0mDy9jHdG2CNelPcAr4PbyP3jAlfoo0WQJDwP52QOYG15RfNms2MRBScV2cFpdYgTxOqbLx02UlUp3rp3jTcGyrPO03gEJIoUy74nHamiP-HkNYbUi-k"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-widest">
+                            FORM PREVIEW
+                        </div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight text-white leading-none">
+                                    Cable Tricep Pushdown
+                                </h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline text-2xl font-black text-primary">3</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Sets of</span>
+<span class="font-headline text-2xl font-black text-primary">12-15</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Reps</span>
+</div>
+<div class="bg-surface-container-highest/40 rounded-lg p-3 border-l-2 border-secondary/50 mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="lightbulb">lightbulb</span>
+<span class="text-[10px] font-black text-secondary uppercase tracking-[0.1em]">Coach's Tip</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                    Keep elbows pinned to your sides. Squeeze triceps hard at the bottom and flare the rope if using one.
+                                </p>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-2 bg-surface-container-highest rounded border border-outline-variant/20 hover:border-primary/40 transition-all group/btn">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover/btn:text-primary transition-colors">Swap Variation</span>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold text-white">Dumbbell Skullcrushers</span>
+<span class="material-symbols-outlined text-sm text-primary" data-icon="swap_horiz">swap_horiz</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Start Workout FAB -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="h-16 px-8 rounded-full bg-gradient-to-br from-primary to-primary-fixed-dim text-on-primary-fixed flex items-center gap-3 font-headline font-black uppercase tracking-tighter neon-glow-active transition-transform active:scale-90">
+<span>Start Training</span>
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-[#131313]/60 backdrop-blur-xl border-t border-[#494847]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-50">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:bg-[#262626] transition-all duration-300 rounded-lg p-2" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Inter'] font-semibold text-[10px] tracking-[0.05em] uppercase mt-1">TRAIN</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#00E5FF] drop-shadow-[0_0_10px_rgba(0,229,255,0.5)] hover:bg-[#262626] transition-all duration-300 rounded-lg p-2" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="font-['Inter'] font-semibold text-[10px] tracking-[0.05em] uppercase mt-1">SPLITS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:bg-[#262626] transition-all duration-300 rounded-lg p-2" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] font-semibold text-[10px] tracking-[0.05em] uppercase mt-1">HISTORY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:bg-[#262626] transition-all duration-300 rounded-lg p-2" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] font-semibold text-[10px] tracking-[0.05em] uppercase mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

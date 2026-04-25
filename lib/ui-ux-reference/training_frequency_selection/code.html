@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#7c4dff",
+                        "on-tertiary-fixed-variant": "#4000ad",
+                        "secondary-dim": "#ff734a",
+                        "on-primary": "#005762",
+                        "primary-fixed-dim": "#00d4ec",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#ffb19b",
+                        "surface-variant": "#262626",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#982700",
+                        "surface": "#0e0e0e",
+                        "on-secondary": "#430c00",
+                        "surface-container-highest": "#262626",
+                        "on-surface": "#ffffff",
+                        "secondary": "#ff734a",
+                        "primary-dim": "#00d4ec",
+                        "surface-container": "#1a1919",
+                        "outline": "#777575",
+                        "on-primary-container": "#004d57",
+                        "error": "#ff716c",
+                        "surface-bright": "#2c2c2c",
+                        "error-dim": "#d7383b",
+                        "background": "#0e0e0e",
+                        "on-error-container": "#ffa8a3",
+                        "tertiary-dim": "#7e51ff",
+                        "primary-fixed": "#00e3fd",
+                        "error-container": "#9f0519",
+                        "surface-container-high": "#201f1f",
+                        "tertiary-fixed-dim": "#ab93ff",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary-fixed-variant": "#005762",
+                        "primary-container": "#00e3fd",
+                        "secondary-container": "#b02f00",
+                        "on-background": "#ffffff",
+                        "inverse-primary": "#006976",
+                        "on-secondary-fixed": "#661700",
+                        "on-surface-variant": "#adaaaa",
+                        "primary": "#81ecff",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary": "#25006b",
+                        "tertiary-fixed": "#b8a3ff",
+                        "secondary-fixed": "#ffc4b4",
+                        "inverse-on-surface": "#565554",
+                        "on-tertiary-fixed": "#1c0055",
+                        "on-primary-fixed": "#003840",
+                        "on-error": "#490006",
+                        "tertiary": "#a68cff",
+                        "surface-tint": "#81ecff",
+                        "outline-variant": "#494847",
+                        "on-secondary-container": "#fff6f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.3);
+        }
+        .neon-glow-active {
+            box-shadow: 0 0 20px 4px rgba(0, 229, 255, 0.5);
+        }
+        .glass-card {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .tonal-transition {
+            background: linear-gradient(to bottom, #131313, transparent);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- Header Navigation Suppression: We hide global nav for onboarding as per "The Destination Rule" -->
+<!-- Top Progress Indicator -->
+<header class="fixed top-0 w-full z-50 px-6 h-16 flex items-center justify-between bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+<span class="font-headline font-black tracking-tighter text-primary text-xl drop-shadow-[0_0_8px_rgba(0,229,255,0.4)]">KINETIC CYBERNETICS</span>
+</div>
+<div class="flex gap-1">
+<div class="h-1 w-6 bg-primary rounded-full"></div>
+<div class="h-1 w-6 bg-primary rounded-full"></div>
+<div class="h-1 w-6 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 w-6 bg-surface-container-highest rounded-full"></div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-lg mx-auto w-full">
+<!-- Hero Section -->
+<div class="mb-10">
+<h1 class="font-headline text-4xl font-bold leading-tight mb-4 tracking-tight">
+                How many days per week <span class="text-primary">can you train?</span>
+</h1>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                Consistency is the engine of progress. Select a frequency that fits your current reality, not just your aspirations.
+            </p>
+</div>
+<!-- Frequency Options (Bento-style layout) -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Option: 2 Days -->
+<button class="group relative flex items-center justify-between p-5 rounded-xl border border-outline-variant/15 bg-surface-container-low transition-all duration-300 hover:bg-surface-container-highest text-left">
+<div class="flex items-center gap-5">
+<div class="font-headline text-5xl font-black text-outline/30 group-hover:text-primary/40 transition-colors">2</div>
+<div>
+<div class="font-headline text-lg font-bold tracking-wide uppercase text-on-surface">Minimalist</div>
+<div class="text-on-surface-variant text-sm">Perfect for maintaining base conditioning.</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary" data-icon="check_circle">check_circle</span>
+</button>
+<!-- Option: 3 Days -->
+<button class="group relative flex items-center justify-between p-5 rounded-xl border border-outline-variant/15 bg-surface-container-low transition-all duration-300 hover:bg-surface-container-highest text-left">
+<div class="flex items-center gap-5">
+<div class="font-headline text-5xl font-black text-outline/30 group-hover:text-primary/40 transition-colors">3</div>
+<div>
+<div class="font-headline text-lg font-bold tracking-wide uppercase text-on-surface">Standard</div>
+<div class="text-on-surface-variant text-sm">Balanced approach for strength and recovery.</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary" data-icon="check_circle">check_circle</span>
+</button>
+<!-- Option: 4 Days (Optimal - Active State) -->
+<button class="group relative flex items-center justify-between p-5 rounded-xl border border-primary/50 bg-surface-container-highest neon-glow transition-all duration-300 text-left">
+<div class="absolute -top-3 -right-2 bg-primary text-on-primary-fixed px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest font-label uppercase z-10">RECOMMENDED</div>
+<div class="flex items-center gap-5">
+<div class="font-headline text-5xl font-black text-primary transition-colors">4</div>
+<div>
+<div class="font-headline text-lg font-bold tracking-wide uppercase text-primary">Optimal</div>
+<div class="text-on-surface-variant text-sm">Maximum efficiency for hypertrophy and power.</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Option: 5 Days -->
+<button class="group relative flex items-center justify-between p-5 rounded-xl border border-outline-variant/15 bg-surface-container-low transition-all duration-300 hover:bg-surface-container-highest text-left">
+<div class="flex items-center gap-5">
+<div class="font-headline text-5xl font-black text-outline/30 group-hover:text-primary/40 transition-colors">5</div>
+<div>
+<div class="font-headline text-lg font-bold tracking-wide uppercase text-on-surface">Performance</div>
+<div class="text-on-surface-variant text-sm">High-volume protocols for advanced athletes.</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary" data-icon="check_circle">check_circle</span>
+</button>
+<!-- Option: 6 Days -->
+<button class="group relative flex items-center justify-between p-5 rounded-xl border border-outline-variant/15 bg-surface-container-low transition-all duration-300 hover:bg-surface-container-highest text-left overflow-hidden">
+<!-- Elite Badge -->
+<div class="absolute -bottom-2 -right-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]" data-icon="military_tech">military_tech</span>
+</div>
+<div class="flex items-center gap-5">
+<div class="font-headline text-5xl font-black text-outline/30 group-hover:text-secondary/40 transition-colors">6</div>
+<div>
+<div class="font-headline text-lg font-bold tracking-wide uppercase text-on-surface group-hover:text-secondary transition-colors">Elite</div>
+<div class="text-on-surface-variant text-sm">Intensive split. Recovery mastery required.</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+<!-- Decorative Info Card -->
+<div class="mt-8 p-4 rounded-xl bg-secondary/5 border border-secondary/20 flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<p class="text-xs text-on-surface-variant font-body leading-relaxed">
+                You can change your frequency anytime in the <span class="text-on-surface font-semibold">Settings</span> menu. Your training blocks will automatically recalibrate based on your new schedule.
+            </p>
+</div>
+</main>
+<!-- Fixed Bottom Action Area -->
+<footer class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface via-surface/95 to-transparent">
+<div class="max-w-lg mx-auto">
+<button class="w-full h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-headline font-bold text-lg rounded-md neon-glow flex items-center justify-center gap-2 active:scale-95 transition-transform duration-150">
+                NEXT PHASE
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="mt-4 text-center">
+<button class="text-on-surface-variant text-xs font-label tracking-widest uppercase hover:text-on-surface transition-colors">
+                    SKIP FOR NOW
+                </button>
+</div>
+</div>
+</footer>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[20%] -right-20 w-64 h-64 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[10%] -left-20 w-80 h-80 bg-secondary/5 blur-[120px] rounded-full"></div>
+</div>
+</body></html>

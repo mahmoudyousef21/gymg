@@ -1,0 +1,146 @@
+class EgyptianGymLexicon {
+  static const Map<String, String> _terms = {
+    'Bench Press (Barbell)': 'بنش برس بالبار',
+    'Incline Bench Press (Barbell)': 'بنش مائل بالبار',
+    'Decline Bench Press (Barbell)': 'بنش دكلين بالبار',
+    'Dumbbell Bench Press': 'بنش دمبل',
+    'Incline Bench Press': 'بنش مائل',
+    'Squat (High Bar)': 'سكوات هاي بار',
+    'Squat (Low Bar)': 'سكوات لو بار',
+    'Barbell Squat': 'سكوات بالبار',
+    'Front Squat': 'فرونت سكوات',
+    'Deadlift (Conventional)': 'ديدليفت تقليدي',
+    'Deadlift (Sumo)': 'ديدليفت سومو',
+    'Romanian Deadlift': 'رومانيان ديدليفت',
+    'Overhead Press (Barbell)': 'أوفرهيد برس بالبار',
+    'Dumbbell Shoulder Press': 'كتف دمبل برس',
+    'Barbell Row': 'باربل رو',
+    'Pull Ups': 'عقلة',
+    'Chin Ups': 'شن أب',
+    'Dips': 'ديبس',
+    'Push Ups': 'بوش أب',
+    'Diamond Push Ups': 'دايموند بوش أب',
+    'Pike Push Ups': 'بايك بوش أب',
+    'Bodyweight Squat': 'سكوات وزن جسم',
+    'Pistol Squat': 'بيستول سكوات',
+    'Lat Pulldown': 'لات بولداون',
+    'Leg Press': 'ليج برس',
+    'Bicep Curls (Dumbbell)': 'بايسبس كيرلز دمبل',
+    'Tricep Extensions': 'ترايسبس إكستنشن',
+    'Lateral Raises': 'رفرفة جانبي',
+    'Face Pulls': 'فيس بول',
+    'Triceps Pushdown': 'ترايسبس بوش داون',
+    'Incline DB Press': 'بنش مائل دمبل',
+    'Low-to-High Cable Fly': 'كابل فلاي من تحت لفوق',
+    'Landmine Press': 'لاندماين برس',
+    'Goblet Squat': 'جوبلت سكوات',
+    'Bulgarian Split Squat': 'بلغاريان سبليت سكوات',
+    'Trap Bar Deadlift': 'تراب بار ديدليفت',
+    'Stiff-Leg Deadlift': 'ديدليفت رجل مستقيمة',
+    'Single-Leg RDL': 'رومانيان رجل واحدة',
+    'Leg Curl': 'ليج كيرل',
+    'Arnold Press': 'أرنولد برس',
+    'Dumbbell Row': 'دمبل رو',
+    'Seated Cable Row': 'كابل رو جالس',
+    'Chest-Supported Row': 'رو مدعوم على بنش',
+    'Assisted Pull-Up': 'عقلة بمساعدة',
+    'Single-Arm Pulldown': 'لات بولداون بإيد واحدة',
+    'Straight-Arm Pulldown': 'بولداون دراع مستقيم',
+    'Band Pull-Apart': 'سحب باند مفتوح',
+    'Rear Delt Fly': 'رفرفة خلفي',
+    'Cable Rear Delt Row': 'رو خلفي بالكابل',
+    'Cable Lateral Raise': 'رفرفة جانبي بالكابل',
+    'Leaning Lateral Raise': 'رفرفة جانبي مايل',
+    'Machine Lateral': 'رفرفة جانبي ماكينة',
+    'Skull Crushers': 'سكال كراشرز',
+    'Overhead Extension': 'إكستنشن فوق الراس',
+    'Barbell Curl': 'باربل كيرل',
+    'Hammer Curl': 'هامر كيرل',
+    'Incline Dumbbell Curl': 'كيرل دمبل على بنش مائل',
+    'Single-Leg Press': 'ليج برس رجل واحدة',
+    'Hack Squat': 'هاك سكوات',
+    'Walking Lunges': 'لونجز مشي',
+    'Reverse Lunge': 'لونجز عكسي',
+    'Step Ups': 'ستيب أب',
+    'Standing Calf Raises': 'سمانة واقف',
+    'Seated Calf Raises': 'سمانة جالس',
+    'Single-Leg Calf Raises': 'سمانة رجل واحدة',
+    'Leg Press Calf': 'سمانة على الليج برس',
+    'Paused Bench': 'بنش بتوقف',
+    'Paused Bench Press': 'بنش برس بتوقف',
+    'Strict Overhead Press': 'أوفرهيد برس ستريكت',
+    'Rear Delt Flies': 'رفرفة خلفي',
+    'Chest': 'صدر',
+    'Back': 'ضهر',
+    'Legs': 'رجل',
+    'Shoulders': 'كتف',
+    'Arms': 'دراعين',
+    'Upper Chest': 'صدر علوي',
+    'Front Delts': 'كتف أمامي',
+    'Side Delts': 'كتف جانبي',
+    'Rear Delts': 'كتف خلفي',
+    'Triceps': 'ترايسبس',
+    'Biceps': 'بايسبس',
+    'Lats': 'لاتس',
+    'Mid Back': 'منتصف الضهر',
+    'Hamstrings': 'خلفية الرجل',
+    'Glutes': 'جلوتس',
+    'Core': 'كور',
+    'Lower Back': 'أسفل الضهر',
+    'Traps': 'ترابيس',
+    'Quads': 'أمامية الرجل',
+    'Calves': 'سمانة',
+    'Rotator Cuff': 'روتيتور كاف',
+    'Posterior Chain': 'سلسلة خلفية',
+    'Scapular Retraction': 'تثبيت لوح الكتف',
+    'Shoulder Strength': 'قوة الكتف',
+    'Control and Stability': 'كنترول وثبات',
+    'Push': 'دفع',
+    'Pull': 'سحب',
+    'Upper': 'علوي',
+    'Lower': 'سفلي',
+    'Push A': 'دفع A',
+    'Pull A': 'سحب A',
+    'Legs A': 'رجل A',
+    'Push B': 'دفع B',
+    'Pull B': 'سحب B',
+    'Legs B': 'رجل B',
+    'Upper A': 'علوي A',
+    'Lower A': 'سفلي A',
+    'Upper B': 'علوي B',
+    'Lower B': 'سفلي B',
+    'Full Body': 'جسم كامل',
+    'Full Body A': 'جسم كامل A',
+    'Full Body B': 'جسم كامل B',
+    'Full Body 2x': 'جسم كامل مرتين',
+    'Push Pull Legs': 'دفع سحب رجل',
+    'Upper Lower': 'علوي سفلي',
+    'Push Pull Legs x2': 'دفع سحب رجل مرتين',
+    'PPL + Upper Lower': 'PPL + علوي سفلي',
+  };
+
+  static final Map<String, String> _reverseTerms = {
+    for (final entry in _terms.entries) entry.value: entry.key,
+  };
+
+  static String term(String value) {
+    final trimmed = value.trim();
+    if (trimmed.isEmpty) {
+      return value;
+    }
+    return _terms[trimmed] ?? value;
+  }
+
+  static String canonicalTerm(String value) {
+    final trimmed = value.trim();
+    if (trimmed.isEmpty) {
+      return value;
+    }
+
+    if (_terms.containsKey(trimmed)) {
+      return trimmed;
+    }
+
+    return _reverseTerms[trimmed] ?? value;
+  }
+}

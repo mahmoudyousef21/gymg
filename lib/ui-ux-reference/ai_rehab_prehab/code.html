@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LiftTier - AI Rehab &amp; Correction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#0e0e0e",
+                      "error-dim": "#d7383b",
+                      "inverse-surface": "#fcf8f8",
+                      "on-primary-fixed": "#003840",
+                      "tertiary-fixed": "#b8a3ff",
+                      "on-tertiary": "#25006b",
+                      "on-primary-container": "#004d57",
+                      "secondary": "#ff734a",
+                      "tertiary-container": "#7c4dff",
+                      "secondary-dim": "#ff734a",
+                      "outline": "#777575",
+                      "on-secondary-fixed": "#661700",
+                      "on-background": "#ffffff",
+                      "on-tertiary-fixed-variant": "#4000ad",
+                      "on-error": "#490006",
+                      "primary": "#81ecff",
+                      "secondary-container": "#b02f00",
+                      "on-primary-fixed-variant": "#005762",
+                      "tertiary-fixed-dim": "#ab93ff",
+                      "primary-fixed-dim": "#00d4ec",
+                      "on-primary": "#005762",
+                      "background": "#0e0e0e",
+                      "surface-container-high": "#201f1f",
+                      "on-surface": "#ffffff",
+                      "on-tertiary-container": "#ffffff",
+                      "secondary-fixed": "#ffc4b4",
+                      "surface-variant": "#262626",
+                      "primary-dim": "#00d4ec",
+                      "surface-bright": "#2c2c2c",
+                      "on-tertiary-fixed": "#1c0055",
+                      "outline-variant": "#494847",
+                      "surface-container-lowest": "#000000",
+                      "inverse-on-surface": "#565554",
+                      "primary-container": "#00e3fd",
+                      "on-secondary": "#430c00",
+                      "surface-tint": "#81ecff",
+                      "error": "#ff716c",
+                      "primary-fixed": "#00e3fd",
+                      "surface-container-low": "#131313",
+                      "inverse-primary": "#006976",
+                      "on-secondary-fixed-variant": "#982700",
+                      "error-container": "#9f0519",
+                      "tertiary": "#a68cff",
+                      "on-secondary-container": "#fff6f4",
+                      "surface-container-highest": "#262626",
+                      "surface": "#0e0e0e",
+                      "secondary-fixed-dim": "#ffb19b",
+                      "tertiary-dim": "#7e51ff",
+                      "on-surface": "#ffffff",
+                      "on-surface-variant": "#adaaaa",
+                      "surface-container": "#1a1919",
+                      "on-error-container": "#ffa8a3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.2);
+        }
+        .neon-glow-strong {
+            box-shadow: 0 0 25px 5px rgba(0, 229, 255, 0.4);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-neutral-900 border-r border-neutral-800 sticky top-0 py-8 px-4 z-50">
+<div class="mb-10 px-2">
+<span class="text-xl font-black text-cyan-400">LiftTier</span>
+</div>
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="relative">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a determined athlete in a dark gym environment with sharp blue rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk-F3wXe2vkq72lHlN3XgpYI-KiwPwFwAhgLxZSPwJf2YMB3BR8NWoQI3fsmJe6djH6e9EcLFraXa8SpiB1bAXlyDos015-CAZ1BK629u8Bg1VGE5w2ZqBUNImZDap8jTED8_QFFes6N-NpJ8taSTLcSgwbSprcS1wFCwxSOYdSnOq-CG-N_LUy_h4QS3ePNZFhgtEZMgrJj8Nrlqyf0obbfrAWtM4S-h3a2PK_okgTf5FV2EVS0jWRi5HCRRih5I7Iu1Ez1hnv6k"/>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center border-2 border-neutral-900">
+<span class="text-[8px] text-on-primary-fixed font-bold">E</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold font-headline leading-tight">Neon Athlete</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Elite Tier • 1,240kg Total</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-inter text-sm font-medium">Social Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter text-sm font-medium">Leaderboards</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-cyan-400 bg-cyan-400/10 border-r-2 border-cyan-400 transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="rebase_edit">rebase_edit</span>
+<span class="font-inter text-sm font-medium">AI Rehab</span>
+</a>
+</nav>
+<button class="mt-4 mb-8 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-md title-sm neon-glow hover:scale-[1.02] active:scale-95 transition-all">
+                Start New Session
+            </button>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-inter text-sm font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 min-w-0 overflow-y-auto bg-surface-dim">
+<!-- TopNavBar (Mobile View) -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-neutral-950/60 backdrop-blur-xl md:hidden">
+<span class="text-2xl font-bold italic text-cyan-400 tracking-tighter">LiftTier</span>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-neutral-400" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-neutral-400" data-icon="settings">settings</span>
+</div>
+</header>
+<div class="max-w-6xl mx-auto p-6 md:p-10 space-y-12">
+<!-- Hero Section: AI Diagnosis -->
+<section class="relative">
+<div class="flex flex-col md:flex-row gap-8 items-end justify-between mb-8">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-primary">Live Diagnosis Active</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold font-headline tracking-tighter text-on-surface leading-[0.9]">
+                                MUSCLE <br/><span class="text-primary">IMBALANCE</span>
+</h1>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 w-full md:w-auto">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Current Status</p>
+<p class="text-2xl font-headline font-bold text-secondary">CRITICAL OFFSET</p>
+</div>
+</div>
+<!-- Diagnosis Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Visual Analysis -->
+<div class="md:col-span-7 aspect-video rounded-2xl overflow-hidden relative group surface-container-low border border-outline-variant/15">
+<img alt="Anatomical diagram" class="w-full h-full object-cover opacity-40" data-alt="Abstract anatomical heatmap of a human torso highlighting rear delts and chest in glowing neon blue and orange tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBSzWn8P-lZBcSTGRwl5rpjla5eq9pD13afs3LXivd5Cqoo9t9sBxDpRaLHdwkWI_HryQfEJnyqb64GjcHWXRyH2PhGvE5ZLU2rxglL3iBTezLOjZFgQxek9O3VuYUIKKc7U9E-kNuiajf-hOm7lIiIq57llMY5yeobMDPHq3be3no8kx-NjrbU1HkevqK1H113bPL0zjZwpIp_0xFaPiSoBhOmXIGFN1HvRAq7z7O7h-1sidm7oMg4dJ1I7cLk1xZFPwFgQ3Y5dY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<!-- Overlaid Tech UI -->
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-1 h-4 bg-primary rounded-full"></span>
+<span class="text-xs font-bold text-primary uppercase">Push/Pull Ratio</span>
+</div>
+<p class="text-4xl font-headline font-bold">1.42 : 1.0</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase">Analyzed Sessions</p>
+<p class="text-lg font-bold">24 Last Lifts</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="glass-panel px-4 py-2 rounded-lg border border-primary/20">
+<p class="text-[8px] text-on-surface-variant uppercase">Anterior Head</p>
+<p class="text-sm font-bold text-primary">Overactive</p>
+</div>
+<div class="glass-panel px-4 py-2 rounded-lg border border-secondary/20">
+<p class="text-[8px] text-on-surface-variant uppercase">Lower Traps</p>
+<p class="text-sm font-bold text-secondary">Under-Engaged</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Breakdown -->
+<div class="md:col-span-5 flex flex-col gap-4">
+<div class="flex-1 bg-surface-container-low p-6 rounded-2xl border border-outline-variant/15 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<h3 class="text-sm font-bold font-headline mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="analytics">analytics</span>
+                                    Bench vs. Row Disparity
+                                </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-on-surface-variant">Bench Press (Max 1RM)</span>
+<span class="font-bold">145kg</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-on-surface-variant">Bent Over Row (Max 1RM)</span>
+<span class="font-bold">102kg</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[60%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                        Your posterior chain power is currently <span class="text-secondary font-bold">28% below</span> the optimal structural balance for your chest strength. This increases risk of <span class="text-on-surface font-semibold">impingement syndrome</span> during heavy pressing.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Routine Section -->
+<section class="space-y-8 pb-20">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center neon-glow">
+<span class="material-symbols-outlined text-on-primary-fixed text-3xl" data-icon="rebase_edit">rebase_edit</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold font-headline">Correction Routine</h2>
+<p class="text-xs text-on-surface-variant">Generated by AI Engine v4.2 based on your biometric scan</p>
+</div>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-widest border border-outline-variant/30 rounded hover:bg-surface-container-highest transition-colors">Export Plan</button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-widest bg-white text-black rounded hover:bg-neutral-200 transition-colors">Print Guide</button>
+</div>
+</div>
+<!-- Mobility Guide -->
+<div class="bg-surface-container p-6 rounded-2xl border-l-4 border-primary">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="lightbulb">lightbulb</span>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider mb-2">Pre-Routine Mobility</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Focus on thoracic extension and pec minor release. Use a foam roller for 2 minutes on the upper back before starting the Rear Delt series.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Exercise Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Exercise Card 1 -->
+<div class="group surface-container-low rounded-2xl p-6 border border-outline-variant/10 hover:border-primary/30 transition-all relative overflow-hidden">
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1 block">Exercise 01</span>
+<h3 class="text-xl font-bold font-headline">Face Pulls</h3>
+<p class="text-xs text-on-surface-variant mt-1">Focus: Rear Delts &amp; Rhomboids</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Target Intensity</p>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-bold text-on-surface">RPE 8</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/5">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Sets</p>
+<p class="text-3xl font-headline font-bold">4</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/5">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Reps</p>
+<p class="text-3xl font-headline font-bold">15-20</p>
+</div>
+</div>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant bg-surface-container-lowest/50 p-3 rounded-lg">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span>Keep elbows high and pull toward your forehead.</span>
+</div>
+</div>
+<!-- Exercise Card 2 -->
+<div class="group surface-container-low rounded-2xl p-6 border border-outline-variant/10 hover:border-primary/30 transition-all relative overflow-hidden">
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1 block">Exercise 02</span>
+<h3 class="text-xl font-bold font-headline">Rear Delt Flies</h3>
+<p class="text-xs text-on-surface-variant mt-1">Focus: Scapular Retraction</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Target Intensity</p>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-bold text-on-surface">RPE 9</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/5">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Sets</p>
+<p class="text-3xl font-headline font-bold">3</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/5">
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Reps</p>
+<p class="text-3xl font-headline font-bold">12</p>
+</div>
+</div>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant bg-surface-container-lowest/50 p-3 rounded-lg">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span>Avoid shrugging. Neutral neck position throughout.</span>
+</div>
+</div>
+</div>
+<!-- Summary Call to Action -->
+<div class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-surface-container-low to-surface-container-highest p-8 rounded-3xl border border-outline-variant/15 gap-6">
+<div class="space-y-2 text-center md:text-left">
+<h3 class="text-2xl font-bold font-headline">Ready to re-calibrate?</h3>
+<p class="text-sm text-on-surface-variant">Perform this routine twice weekly for 4 weeks to see significant improvement.</p>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary-fixed font-bold rounded-lg neon-glow-strong hover:scale-105 active:scale-95 transition-all">
+                            BEGIN REHAB SESSION
+                        </button>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-outline-variant/10 px-6 py-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-neutral-500" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-500" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-medium">Social</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-cyan-400" href="#">
+<span class="material-symbols-outlined" data-icon="rebase_edit">rebase_edit</span>
+<span class="text-[10px] font-bold">AI Rehab</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-500" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-[10px] font-medium">Leader</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-500" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

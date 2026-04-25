@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#0e0e0e",
+                    "error-dim": "#d7383b",
+                    "inverse-surface": "#fcf8f8",
+                    "on-primary-fixed": "#003840",
+                    "tertiary-fixed": "#b8a3ff",
+                    "on-tertiary": "#25006b",
+                    "on-primary-container": "#004d57",
+                    "secondary": "#ff734a",
+                    "tertiary-container": "#7c4dff",
+                    "secondary-dim": "#ff734a",
+                    "outline": "#777575",
+                    "on-secondary-fixed": "#661700",
+                    "on-background": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "on-error": "#490006",
+                    "primary": "#81ecff",
+                    "secondary-container": "#b02f00",
+                    "on-primary-fixed-variant": "#005762",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "primary-fixed-dim": "#00d4ec",
+                    "on-primary": "#005762",
+                    "background": "#0e0e0e",
+                    "surface-container-high": "#201f1f",
+                    "on-tertiary-container": "#ffffff",
+                    "secondary-fixed": "#ffc4b4",
+                    "surface-variant": "#262626",
+                    "primary-dim": "#00d4ec",
+                    "surface-bright": "#2c2c2c",
+                    "on-tertiary-fixed": "#1c0055",
+                    "outline-variant": "#494847",
+                    "surface-container-lowest": "#000000",
+                    "inverse-on-surface": "#565554",
+                    "primary-container": "#00e3fd",
+                    "on-secondary": "#430c00",
+                    "surface-tint": "#81ecff",
+                    "error": "#ff716c",
+                    "primary-fixed": "#00e3fd",
+                    "surface-container-low": "#131313",
+                    "inverse-primary": "#006976",
+                    "on-secondary-fixed-variant": "#982700",
+                    "error-container": "#9f0519",
+                    "tertiary": "#a68cff",
+                    "on-secondary-container": "#fff6f4",
+                    "surface-container-highest": "#262626",
+                    "surface": "#0e0e0e",
+                    "secondary-fixed-dim": "#ffb19b",
+                    "tertiary-dim": "#7e51ff",
+                    "on-surface": "#ffffff",
+                    "on-surface-variant": "#adaaaa",
+                    "surface-container": "#1a1919",
+                    "on-error-container": "#ffa8a3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.3);
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(129, 236, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Shell Container -->
+<div class="flex min-h-screen bg-surface overflow-hidden">
+<!-- SideNavBar (Authority JSON) -->
+<aside class="hidden md:flex flex-col h-full py-8 px-4 bg-neutral-900 h-screen w-64 border-r border-neutral-800 sticky top-0 font-inter text-sm font-medium">
+<div class="mb-10 px-2">
+<span class="text-xl font-black text-cyan-400 tracking-tighter">LIFT TIER</span>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-3 px-3 py-3 rounded text-cyan-400 bg-cyan-400/10 border-r-2 border-cyan-400 cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span>Social Feed</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboards</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined">rebase_edit</span>
+<span>AI Rehab</span>
+</div>
+</div>
+<div class="mt-auto border-t border-neutral-800 pt-6">
+<div class="flex items-center gap-3 p-3 mb-4 rounded-xl bg-neutral-800/50">
+<img alt="Profile" class="w-10 h-10 rounded-full object-cover" data-alt="close-up portrait of a fit man in a gym setting with dramatic high-contrast lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACCCYFGXd6Tk3k1YYwevo1BtLEfXtHmf355jC1n9P2fBapwd7A92DQxXj7P_sFXBWCKwwoOjk-y81EVxWt24Nu50hQMo9PbffYjIELyOm3q-eMv-xRMmJH-tdZ7kFblCG3-Kd9uv3sIwPF3bH6U13WnMS1H4-6xSy073j4k2BiZ6oX_TCbIpw5biLj5zy3C-RMLcFxui-TB1pRPdJLIQ7FHlCsK26RrbZ4LO-nQAIbA0vyNXOHsumMkm1aHb-FH48wUfdNl4808Bk"/>
+<div class="flex flex-col overflow-hidden">
+<span class="text-white font-bold truncate">Neon Athlete</span>
+<span class="text-xs text-neutral-400 truncate">Elite Tier • 1,240kg Total</span>
+</div>
+</div>
+<button class="w-full py-3 mb-6 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold rounded-lg neon-glow-primary active:opacity-80 transition-all">
+                    Start New Session
+                </button>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-200 cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-200 cursor-pointer">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto relative bg-surface-dim">
+<!-- TopNavBar (Authority JSON) -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-neutral-950/60 backdrop-blur-xl">
+<div class="md:hidden">
+<span class="text-2xl font-bold italic text-cyan-400 tracking-tighter">LiftTier</span>
+</div>
+<div class="hidden md:block">
+<h1 class="text-lg font-headline font-bold text-on-surface tracking-wide">SYSTEM OVERVIEW</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-neutral-400">
+<span class="material-symbols-outlined hover:text-cyan-300 transition-colors cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined hover:text-cyan-300 transition-colors cursor-pointer" data-icon="settings">settings</span>
+</div>
+<div class="w-8 h-8 rounded-full border border-primary/30 p-0.5">
+<img alt="Avatar" class="w-full h-full rounded-full object-cover" data-alt="User avatar with current tier badge overlay and glowing blue circular border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq3m-64OquggmIxUvAA1CgNZ0EmYW6Fc5npod2jj0Bm3OS-pzcpV44yqww4fumkgOOLd6M7w86YS_O4pWGlmi_h-FLEGSQVwfbPlvS-vNZYeXoD2UtlTJSNGI_9djqmQfGRze5KaZK1ThOQnUFyDXqj3CwaHfCKyA83mFT_lf_3TFcKuktul_19XgpIlGw4If5JkcqWNne1EubvHJ8V_b7SESestIhWPPjUSMOyA7jjtGJC38jBoWQhZYUyZOk6yvnKKFsLbMlTCo"/>
+</div>
+</div>
+</header>
+<div class="px-6 py-8 max-w-7xl mx-auto space-y-10">
+<!-- Hero Section: Tier Ranking -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 relative overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+<div class="relative z-10 flex flex-col h-full">
+<span class="font-label text-xs tracking-widest text-primary mb-2 uppercase">Current Standing</span>
+<h2 class="text-4xl font-headline font-bold mb-8">Performance Tier</h2>
+<div class="flex flex-col md:flex-row items-center gap-10 mt-auto">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-full animate-pulse"></div>
+<div class="glass-panel w-40 h-40 rounded-full flex flex-col items-center justify-center border border-on-surface/10 neon-glow-primary">
+<span class="material-symbols-outlined text-6xl text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-headline font-black text-2xl mt-1 tracking-widest text-glow">GOLD</span>
+</div>
+<!-- Offset Badge -->
+<div class="absolute top-0 right-0 glass-panel px-3 py-1 border border-primary/50 rounded-full text-[10px] font-bold text-primary transform translate-x-4 -translate-y-2">
+                                        TOP 4%
+                                    </div>
+</div>
+<div class="flex-1 space-y-6 w-full">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">NEXT: DIAMOND</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest/50 p-4 rounded-lg">
+<span class="block text-[10px] font-label text-on-surface-variant">GLOBAL RANK</span>
+<span class="text-xl font-headline font-bold text-white">#1,402</span>
+</div>
+<div class="bg-surface-container-highest/50 p-4 rounded-lg">
+<span class="block text-[10px] font-label text-on-surface-variant">TOTAL LIFT</span>
+<span class="text-xl font-headline font-bold text-white">585kg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Stats Bento -->
+<div class="lg:col-span-5 grid grid-cols-1 gap-4">
+<div class="bg-surface-container-low border border-outline-variant/10 p-6 rounded-xl flex items-center justify-between">
+<div>
+<span class="font-label text-[10px] text-on-surface-variant tracking-[0.2em] mb-1 block">MAX SQUAT</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold">210</span>
+<span class="text-xs text-on-surface-variant">KG</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary text-xs font-bold">+5kg</span>
+<div class="h-8 w-24 bg-primary/10 rounded overflow-hidden mt-1">
+<div class="w-full h-full bg-primary/30" style="clip-path: polygon(0 80%, 20% 50%, 40% 70%, 60% 30%, 80% 40%, 100% 0, 100% 100%, 0% 100%);"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/10 p-6 rounded-xl flex items-center justify-between">
+<div>
+<span class="font-label text-[10px] text-on-surface-variant tracking-[0.2em] mb-1 block">MAX BENCH</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold">145</span>
+<span class="text-xs text-on-surface-variant">KG</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-neutral-400 text-xs font-bold">STABLE</span>
+<div class="h-8 w-24 bg-neutral-500/10 rounded overflow-hidden mt-1">
+<div class="w-full h-full bg-neutral-500/30" style="clip-path: polygon(0 60%, 20% 62%, 40% 58%, 60% 61%, 80% 59%, 100% 60%, 100% 100%, 0% 100%);"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/10 p-6 rounded-xl flex items-center justify-between">
+<div>
+<span class="font-label text-[10px] text-on-surface-variant tracking-[0.2em] mb-1 block">MAX DEADLIFT</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold">230</span>
+<span class="text-xs text-on-surface-variant">KG</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-secondary text-xs font-bold">+12kg</span>
+<div class="h-8 w-24 bg-secondary/10 rounded overflow-hidden mt-1">
+<div class="w-full h-full bg-secondary/30" style="clip-path: polygon(0 100%, 20% 80%, 40% 60%, 60% 40%, 80% 20%, 100% 0, 100% 100%, 0% 100%);"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Muscle Analysis Section -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+<div class="xl:col-span-8 bg-surface-container-low rounded-xl border border-outline-variant/10 p-8 relative overflow-hidden">
+<div class="flex justify-between items-start mb-8 relative z-10">
+<div>
+<h2 class="text-2xl font-headline font-bold">Muscle Imbalance Analysis</h2>
+<p class="text-on-surface-variant text-sm mt-1 max-w-md">Biometric heat map based on recent squat and hip hinge performance. Highlighting mechanical fatigue points.</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-secondary/20 border border-secondary/40 rounded text-secondary text-[10px] font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm">warning</span>
+                                Weak Chain Detected
+                            </div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-around gap-12 py-8">
+<!-- Posterior Heatmap Visual (Symbolic Representation) -->
+<div class="relative w-full max-w-xs aspect-[1/2] group">
+<img alt="Heatmap" class="w-full h-full object-cover rounded-2xl opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="stylized 3D render of a human muscular system with glowing blue accents and bright orange heat map highlights on the lower back and hamstrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjKomMtHU-joKWWg7-HjoizZzf66wkK-k9tUHLPPNvRwdbZW11foeU2Fl3wu9V76MIlyqZDM_gp1pjZwSbEhT5r08_BS6OUhHJVgO1Ubcrno9ZqqioEOrX6-pIy4eJ6inxj3a3yv6fZ68O2fxYIpxE9MUc6LLaoHImHTVjgbIErPjnjJQHKExJLopkAau_XT56olR6YnzUsJ-cSA6eqWaLbjtPjWuXrvrvCKgS0cxYnujdvdVNtFROxd3kp9Noa5R-n4Rm6OtOOD0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<!-- Heat Overlays -->
+<div class="absolute top-1/2 left-1/4 w-12 h-20 bg-secondary/40 blur-xl rounded-full"></div>
+<div class="absolute top-[60%] right-1/4 w-12 h-24 bg-secondary/60 blur-xl rounded-full"></div>
+<!-- UI Callout -->
+<div class="absolute top-[55%] -right-10 glass-panel border border-secondary/50 p-3 rounded-lg shadow-2xl">
+<span class="block text-secondary font-bold text-xs">LOWER BACK</span>
+<span class="text-[10px] text-white">CRITICAL LOAD</span>
+</div>
+</div>
+<div class="flex-1 w-full space-y-8">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-label text-xs uppercase text-on-surface-variant">Posterior Chain Strength</span>
+<span class="text-secondary font-bold">Weak (64%)</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 64%"></div>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Your hamstrings and erector spinae are lagging behind your quads. This is causing forward pitch during heavy squats.</p>
+</div>
+<div class="bg-surface-container-highest/40 rounded-xl p-6 border-l-4 border-primary">
+<span class="block font-label text-[10px] text-primary tracking-widest mb-2 uppercase">REHAB RECOMMENDATION</span>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                            Add Romanian Deadlifts (3x10)
+                                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                            Increase Glute Bridge frequency
+                                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                            Perform 5m bird-dogs post-workout
+                                        </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-8">
+<!-- Volume Chart Card -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/10 p-6 flex-1">
+<h3 class="text-sm font-label tracking-widest text-on-surface-variant uppercase mb-6">Volume Trend</h3>
+<div class="h-48 flex items-end gap-2 px-2">
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[40%] transition-all hover:bg-primary"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[55%] transition-all hover:bg-primary"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[45%] transition-all hover:bg-primary"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[70%] transition-all hover:bg-primary"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[60%] transition-all hover:bg-primary"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[90%] neon-glow-primary"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[80%] transition-all hover:bg-primary"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-label text-neutral-600">
+<span>MON</span>
+<span>TUE</span>
+<span>WED</span>
+<span>THU</span>
+<span>FRI</span>
+<span class="text-primary font-bold">SAT</span>
+<span>SUN</span>
+</div>
+</div>
+<!-- Energy Levels -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/10 p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-sm font-label tracking-widest text-on-surface-variant uppercase">Bio-Readiness</h3>
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full border-4 border-primary/20 flex items-center justify-center relative">
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="176" stroke-dashoffset="35" stroke-width="4"></circle>
+</svg>
+<span class="text-xl font-bold font-headline">82</span>
+</div>
+<div>
+<span class="text-xs font-bold text-white block">Ready for Peak Effort</span>
+<span class="text-[10px] text-on-surface-variant">Sleep Quality: 9/10 • HRV: Stable</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Shell (Authority JSON) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-xl border-t border-white/5 flex justify-around items-center h-16 px-4">
+<div class="flex flex-col items-center text-cyan-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] mt-0.5">Dashboard</span>
+</div>
+<div class="flex flex-col items-center text-neutral-400">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] mt-0.5">Social</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center -mt-8 shadow-lg shadow-primary/40 text-on-primary">
+<span class="material-symbols-outlined font-bold">add</span>
+</div>
+</div>
+<div class="flex flex-col items-center text-neutral-400">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] mt-0.5">Ranks</span>
+</div>
+<div class="flex flex-col items-center text-neutral-400">
+<span class="material-symbols-outlined">rebase_edit</span>
+<span class="text-[10px] mt-0.5">AI</span>
+</div>
+</nav>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIFTTIER | Elite Coaches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-dim": "#d7383b",
+                    "outline-variant": "#494847",
+                    "primary-fixed": "#00e3fd",
+                    "primary": "#81ecff",
+                    "tertiary-dim": "#7e51ff",
+                    "primary-dim": "#00d4ec",
+                    "error-container": "#9f0519",
+                    "on-tertiary": "#25006b",
+                    "surface-container-high": "#201f1f",
+                    "on-secondary-fixed-variant": "#982700",
+                    "on-primary": "#005762",
+                    "on-secondary-fixed": "#661700",
+                    "inverse-primary": "#006976",
+                    "tertiary": "#a68cff",
+                    "on-tertiary-container": "#ffffff",
+                    "primary-fixed-dim": "#00d4ec",
+                    "on-primary-fixed-variant": "#005762",
+                    "on-secondary-container": "#fff6f4",
+                    "secondary-container": "#b02f00",
+                    "on-error-container": "#ffa8a3",
+                    "primary-container": "#00e3fd",
+                    "secondary-dim": "#ff734a",
+                    "secondary": "#ff734a",
+                    "secondary-fixed-dim": "#ffb19b",
+                    "inverse-on-surface": "#565554",
+                    "tertiary-container": "#7c4dff",
+                    "on-secondary": "#430c00",
+                    "on-primary-fixed": "#003840",
+                    "secondary-fixed": "#ffc4b4",
+                    "background": "#0e0e0e",
+                    "surface": "#0e0e0e",
+                    "tertiary-fixed": "#b8a3ff",
+                    "inverse-surface": "#fcf8f8",
+                    "on-error": "#490006",
+                    "surface-container": "#1a1919",
+                    "surface-bright": "#2c2c2c",
+                    "surface-variant": "#262626",
+                    "surface-dim": "#0e0e0e",
+                    "on-background": "#ffffff",
+                    "surface-tint": "#81ecff",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "outline": "#777575",
+                    "surface-container-lowest": "#000000",
+                    "on-surface-variant": "#adaaaa",
+                    "error": "#ff716c",
+                    "surface-container-highest": "#262626",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "on-tertiary-fixed": "#1c0055",
+                    "surface-container-low": "#131313",
+                    "on-surface": "#ffffff",
+                    "on-primary-container": "#004d57"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.3);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 15px 2px rgba(255, 115, 74, 0.3);
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-[#0e0e0e] fixed top-0 w-full z-50 bg-gradient-to-b from-[#131313] to-transparent">
+<div class="flex justify-between items-center px-6 h-20 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a determined athlete with subtle sweat on their brow in a moody dark gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRKSbzXpgZRwzHswESsCnaqeeys8isjltqNhNeF6e7NTpNz5Kr3iLQ-WXq7czStYInalxmMb3J6B8-wPrz9STo6yuupipTk_cnM0w_ZwsdJLXiHs8wg8gj--jmMSXC27NrG7LYf8g2nMCLdvMMZsNyNLYGpBwfjvu9sVGm540RdAznmDJde35NVJImzOa19Jsmxs5_vRega7xTXg8qvwRr73sduu7EDZCuGKlTvTYWHkOBIX0kzuMKPLybJVXSC2dSBEMMcBq3t3M"/>
+</div>
+<span class="text-2xl font-black italic text-[#00E5FF] tracking-tighter font-['Space_Grotesk']">LIFTTIER</span>
+</div>
+<button class="active:scale-95 transition-transform text-[#00E5FF]">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6">
+<!-- Hero Header Section -->
+<section class="mb-10">
+<p class="text-primary font-headline font-bold tracking-widest text-[10px] uppercase mb-2">Human Performance</p>
+<h1 class="text-on-background font-headline text-4xl font-bold tracking-tight leading-none mb-4">Select Your <br/><span class="text-primary">Elite Coach</span></h1>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs">Upgrade your kinetic potential with world-class specialists in strength engineering.</p>
+</section>
+<!-- Search & Filter Bar -->
+<div class="flex gap-3 mb-8">
+<div class="flex-1 bg-surface-container-highest rounded-xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-sm text-on-surface placeholder:text-on-surface-variant/50 w-full" placeholder="Find specialist..." type="text"/>
+</div>
+<button class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Coaches Grid -->
+<div class="space-y-8">
+<!-- Coach Card 1: Diamond Tier -->
+<div class="relative group">
+<!-- 3D Glass Badge -->
+<div class="absolute -top-3 -right-2 z-10 glass-panel border-t border-on-surface/30 px-3 py-1 rounded-full flex items-center gap-1 neon-glow-secondary">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="text-[10px] font-headline font-bold text-secondary uppercase tracking-widest">Diamond</span>
+</div>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-300 group-active:scale-[0.98]">
+<div class="h-64 relative">
+<img alt="Coach Marcus" class="w-full h-full object-cover" data-alt="professional male powerlifting coach with a beard wearing high-performance athletic gear standing in a high-tech gym with blue neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscRwK48PXnPdDg5EKGsK_VsTyQvv4exDBX6UeaxDPgOGJ7-ajvXXj-tH_eHEWRny-dYonWydiNe1z8pai8HtXLTSsplGiBU4wEGvTMmcVHF6MbD8890XAhbXd8HojGJ-YgyuK2FbEyQHQPd796f7DZatA2SCB8NEbduUWjKIfpKP2lmH2TVMXOXvGHKboF7A-KrPZfaHk209u9PALnkAWgvIPWVX7rOKDKykZigSx_-udzxCfimyJ0rntL0iR7TZWvvz1eKfV9EM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h2 class="text-on-surface font-headline text-2xl font-bold">Marcus Thorne</h2>
+<p class="text-primary text-xs font-label font-semibold tracking-widest uppercase">Powerlifting Specialist</p>
+</div>
+</div>
+<div class="p-6 pt-2">
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Rate</span>
+<span class="text-on-surface font-headline text-lg font-bold">$120<span class="text-xs font-normal text-on-surface-variant">/hr</span></span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Experience</span>
+<span class="text-on-surface font-headline text-lg font-bold">12+ Yrs</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface-container-highest text-on-surface py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider transition-all active:bg-surface-bright">View Profile</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider neon-glow-primary active:scale-95 transition-all">Book Session</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Coach Card 2: Elite Tier -->
+<div class="relative group">
+<div class="absolute -top-3 -right-2 z-10 glass-panel border-t border-on-surface/30 px-3 py-1 rounded-full flex items-center gap-1 shadow-xl">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[10px] font-headline font-bold text-primary uppercase tracking-widest">Elite</span>
+</div>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-300 group-active:scale-[0.98]">
+<div class="h-64 relative">
+<img alt="Coach Sarah" class="w-full h-full object-cover" data-alt="focused female bodybuilding coach with athletic physique in a modern dark fitness studio with dramatic lighting and equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0HPstmbEIN-o4xExhgXPF9-KpDP8nryOno79E7idUR19eay3eWAB5DcZ7hjreYnwVDSjCt5beUs0AMzo6iozK3hleZQT1eooKpcEo1VUPlJZaK6J6akHYOtVyomtUEdzNk3_nIrM64nOotTVcBVUGgHZeVIy3yu8AMRsVqloQAh12zdGw8zSgoKnj6CkE4Q0by_gTZ9sCn8lWvvWF0kJ8f-zbrFEcj5wBAkTNEvW206DGZDnNk3RsWQ-nh-HvNgZPb0ny-WYKA4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h2 class="text-on-surface font-headline text-2xl font-bold">Sarah Vance</h2>
+<p class="text-primary text-xs font-label font-semibold tracking-widest uppercase">Bodybuilding &amp; Aesthetics</p>
+</div>
+</div>
+<div class="p-6 pt-2">
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Rate</span>
+<span class="text-on-surface font-headline text-lg font-bold">$95<span class="text-xs font-normal text-on-surface-variant">/hr</span></span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Clients</span>
+<span class="text-on-surface font-headline text-lg font-bold">200+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface-container-highest text-on-surface py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider transition-all active:bg-surface-bright">View Profile</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider neon-glow-primary active:scale-95 transition-all">Book Session</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Coach Card 3: Iron Tier -->
+<div class="relative group">
+<div class="absolute -top-3 -right-2 z-10 glass-panel border-t border-on-surface/30 px-3 py-1 rounded-full flex items-center gap-1 opacity-80">
+<span class="material-symbols-outlined text-[14px] text-outline" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="text-[10px] font-headline font-bold text-outline uppercase tracking-widest">Iron</span>
+</div>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-300 group-active:scale-[0.98]">
+<div class="h-64 relative">
+<img alt="Coach David" class="w-full h-full object-cover" data-alt="male athletic trainer in a industrial gym setting with raw concrete walls and intense side lighting showing strength and determination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWB0fscqBbYecBcOYBnwn_3Midavd71G107nJ2QE-g_RceGt_TcyQoQlBaWuxOgYJ07JXL3CukcphfwXQbXdl2Ml2BxrFf6lbQZxoP1dOysqdorOYrUInJb-1mWuv6a3TQQbVTPq0Rh2cBzxgRDIuhcXj6K0n27e30e18FWVrQJ54vpXPUldaPDrFLoBB3vh5Ih-UKJ2otjdBmiPNingjLA3qkNKveW2GqtbYQ5FIHFpa-niDk91hdKYMfsTSAcYhrMNmvmOm2a8Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h2 class="text-on-surface font-headline text-2xl font-bold">David Chen</h2>
+<p class="text-primary text-xs font-label font-semibold tracking-widest uppercase">Kettlebell &amp; Conditioning</p>
+</div>
+</div>
+<div class="p-6 pt-2">
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Rate</span>
+<span class="text-on-surface font-headline text-lg font-bold">$75<span class="text-xs font-normal text-on-surface-variant">/hr</span></span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant text-[10px] uppercase font-label tracking-widest">Method</span>
+<span class="text-on-surface font-headline text-lg font-bold">Hybrid</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface-container-highest text-on-surface py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider transition-all active:bg-surface-bright">View Profile</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary py-3 rounded-md font-headline font-bold text-xs uppercase tracking-wider neon-glow-primary active:scale-95 transition-all">Book Session</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#131313]/60 backdrop-blur-xl fixed bottom-0 w-full z-50 rounded-t-[32px] border-t border-[#494847]/15 shadow-[0_-8px_30px_rgb(0,0,0,0.5)]">
+<div class="flex justify-around items-center h-24 pb-6 px-4 w-full">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Social</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#00E5FF] drop-shadow-[0_0_10px_rgba(0,229,255,0.5)] hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Coaches</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">psychology</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">AI Rehab</span>
+</a>
+</div>
+</nav>
+</body></html>
